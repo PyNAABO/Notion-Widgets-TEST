@@ -24,11 +24,14 @@
         }
     </style>
 </head>
-<body>
+<body onclick="updateWord()">
     <div class="widget" id="randomWord">Loading...</div>
     <script>
         const words = ["CAT", "DOG", "TAC", "GOD"];
-        document.getElementById("randomWord").innerText = words[Math.floor(Math.random() * words.length)];
+        function updateWord() {
+            document.getElementById("randomWord").innerText = words[Math.floor(Math.random() * words.length)];
+        }
+        updateWord();
     </script>
 </body>
 </html>
