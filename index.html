@@ -32,6 +32,7 @@
             document.getElementById("randomWord").innerText = words[Math.floor(Math.random() * words.length)];
         }
         updateWord();
+        setInterval(updateWord, 10000);
     </script>
 </body>
 </html>
