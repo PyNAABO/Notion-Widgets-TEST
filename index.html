@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Word Widget</title>
+    <title>Ordered Word Widget</title>
     <style>
         html, body {
             width: 100vw;
@@ -33,14 +33,16 @@
     </style>
 </head>
 <body onclick="updateWord()">
-    <div class="widget" id="randomWord">تحميل...</div>
+    <div class="widget" id="wordDisplay">تحميل...</div>
     <script>
         const words = ["سبحان الله", "الحمد لله", "الله أكبر"];
+        let index = 0;
         function updateWord() {
-            document.getElementById("randomWord").innerText = words[Math.floor(Math.random() * words.length)];
+            document.getElementById("wordDisplay").innerText = words[index];
+            index = (index + 1) % words.length;
         }
         updateWord();
-        setInterval(updateWord, 10000);
+        setInterval(updateWord, 3333);
     </script>
 </body>
 </html>
